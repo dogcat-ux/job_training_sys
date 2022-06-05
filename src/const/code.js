@@ -15,7 +15,7 @@ const success = (msg, data, status) => {
 
 const fail = (msg, data, status) => {
   return {
-    status: code.ServerError || status,
+    status: status || code.ServerError,
     data: data || null,
     msg: msg || null
   }
